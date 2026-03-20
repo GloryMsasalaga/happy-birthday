@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Happy Birthday Veryniceglory!</title>
+    <meta name="description"
+        content="Happy Birthday veryniceglory! A special celebration filled with love, wishes, and fun.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">🎂</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Moments</a></li>
+            <li><a href="#wishes">Wishes</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#cake">Celebrate</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ===================== SECTION 1: HERO ===================== -->
+    <section class="hero" id="hero">
+        <canvas id="confettiCanvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-subtitle script-font">It's time to celebrate!</p>
+            <h1 class="hero-title">
+                <span class="glow-text">Happy Birthday</span>
+                <span class="glow-text accent">Veryniceglory!</span>
+            </h1>
+            <div class="hero-stars">✦ ✦ ✦</div>
+            <div class="hero-today-badge" id="todayBadge">
+                <span class="today-emoji">🎉</span>
+                <span class="today-text">TODAY IS THE BIG DAY!</span>
+                <span class="today-emoji">🎉</span>
+            </div>
+            <p class="hero-date">📅 Friday, March 20, 2026</p>
+            <div class="hero-age-counter">
+                <div class="age-item glass-card">
+                    <span class="age-number" id="liveHours">00</span>
+                    <span class="age-label">Hours of Birthday</span>
+                </div>
+                <div class="age-item glass-card">
+                    <span class="age-number" id="liveMins">00</span>
+                    <span class="age-label">Minutes</span>
+                </div>
+                <div class="age-item glass-card">
+                    <span class="age-number" id="liveSecs">00</span>
+                    <span class="age-label">Seconds</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <!-- TODO: Replace the href below with your actual Snippe payment link -->
+                <a href="https://snippe.me/pay/birthday-gifts" class="snippe-btn glass-card" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="btn-icon">🎁</span> Send a Birthday Gift via Snippe
+                </a>
+                
+                <div class="charity-heart-container glass-card" id="charityHeartContainer">
+                    <div class="charity-heart">
+                        <div class="heart-shape">❤️</div>
+                    </div>
+                    <div class="charity-info">
+                        <span class="charity-label">Charity Raised</span>
+                        <span class="charity-amount" id="charityAmount">$0</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-cta">
+                <span>Scroll to Celebrate</span>
+                <div class="scroll-arrow">↓</div>
+            </a>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+    </section>
+
+    <!-- ===================== SECTION 2: ABOUT ===================== -->
+    <section class="section about" id="about">
+        <div class="section-header reveal">
+            <p class="section-tag script-font">The Legend Themselves</p>
+            <h2 class="section-title">Who is <span class="accent">Veryniceglory?</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-image reveal reveal-left">
+                <div class="image-frame">
+                    <img src="birthday_hero.png" alt="veryniceglory" id="aboutPhoto">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+            <div class="about-info reveal reveal-right">
+                <p class="about-message">
+                    🔥 <strong>Veryniceglory</strong> isn't just a name — it's a whole vibe.
+                    A walking masterpiece of creativity, chaos, and unapologetic brilliance.
+                    The kind of person who lights up every room, breaks every mold, and makes
+                    the ordinary look legendary. Today, the world celebrates YOU —
+                    the blueprint, the original, the one and only. Let's go! 🚀✨
+                </p>
+                <div class="fun-stats">
+                    <div class="stat-card glass-card">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% That Person</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-number" data-target="999">0</div>
+                        <div class="stat-label">Vibes Per Hour</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-number" data-target="1000000">0</div>
+                        <div class="stat-label">Reasons to Smile</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-number" data-target="0">∞</div>
+                        <div class="stat-label">Limits (None!)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 3: TIMELINE ===================== -->
+    <section class="section timeline-section" id="timeline">
+        <div class="section-header reveal">
+            <p class="section-tag script-font">A Journey Through Time</p>
+            <h2 class="section-title">Life's <span class="accent">Beautiful Moments</span></h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item reveal reveal-left">
+                <div class="timeline-marker">👶</div>
+                <div class="timeline-card glass-card">
+                    <span class="timeline-year">Year 1</span>
+                    <h3>Hello, World!</h3>
+                    <p>A golden was born! The world became a brighter place the moment I arrived to my parent's eyes
+                        haha! 🌟</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right reveal reveal-right">
+                <div class="timeline-marker">🎒</div>
+                <div class="timeline-card glass-card">
+                    <span class="timeline-year">Childhood</span>
+                    <h3>Adventures Begin</h3>
+                    <p>From first steps to first friendships — every moment was magical and full of wonder not really!
+                        hahaha!. ✨</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-left">
+                <div class="timeline-marker">🎓</div>
+                <div class="timeline-card glass-card">
+                    <span class="timeline-year">School Years</span>
+                    <h3>Learning & Growing</h3>
+                    <p>Knowledge, few friendships, and food took shape during these incredible formative years. 📚</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right reveal reveal-right">
+                <div class="timeline-marker">🚀</div>
+                <div class="timeline-card glass-card">
+                    <span class="timeline-year">Teen Years</span>
+                    <h3>Dreams Take Flight</h3>
+                    <p>Passions ignite, creativity flows, and the future starts looking kinda hard and bright hahaha! 🔥
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-left">
+                <div class="timeline-marker">🎉</div>
+                <div class="timeline-card glass-card">
+                    <span class="timeline-year">Today</span>
+                    <h3>The Best Is Yet to Come!</h3>
+                    <p>Every chapter gets better. Here's to more adventures, more memories, more YOU! 🥳</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 4: WISHES (Form + Wall) ===================== -->
+    <section class="section wishes-section" id="wishes">
+        <div class="section-header reveal">
+            <p class="section-tag script-font">Send Your Love</p>
+            <h2 class="section-title">Birthday <span class="accent">Wish Wall</span></h2>
+        </div>
+
+        <!-- Wish Form -->
+        <div class="wish-form-container reveal">
+            <form class="wish-form glass-card" id="wishForm">
+                <h3 class="wish-form-title">✍️ Drop Your Birthday Wish</h3>
+                <div class="form-group">
+                    <label for="wishName">Your Name</label>
+                    <input type="text" id="wishName" placeholder="What should we call you?" required maxlength="30">
+                </div>
+                <div class="form-group">
+                    <label for="wishMessage">Your Wish</label>
+                    <textarea id="wishMessage" placeholder="Write something beautiful for veryniceglory..." required
+                        maxlength="200" rows="3"></textarea>
+                    <span class="char-count"><span id="charCount">0</span>/200</span>
+                </div>
+                <div class="form-group">
+                    <label>Pick an Emoji</label>
+                    <div class="emoji-picker" id="emojiPicker">
+                        <button type="button" class="emoji-option active" data-emoji="🎈">🎈</button>
+                        <button type="button" class="emoji-option" data-emoji="🌟">🌟</button>
+                        <button type="button" class="emoji-option" data-emoji="🎁">🎁</button>
+                        <button type="button" class="emoji-option" data-emoji="💖">💖</button>
+                        <button type="button" class="emoji-option" data-emoji="🦋">🦋</button>
+                        <button type="button" class="emoji-option" data-emoji="🔥">🔥</button>
+                        <button type="button" class="emoji-option" data-emoji="🎶">🎶</button>
+                        <button type="button" class="emoji-option" data-emoji="🌈">🌈</button>
+                        <button type="button" class="emoji-option" data-emoji="🚀">🚀</button>
+                        <button type="button" class="emoji-option" data-emoji="👑">👑</button>
+                    </div>
+                </div>
+                <button type="submit" class="wish-submit-btn" id="wishSubmitBtn">🎉 Post Your Wish</button>
+            </form>
+        </div>
+
+        <!-- Wish Wall -->
+        <div class="wish-wall-header reveal">
+            <h3>🧱 The Birthday Wall <span class="wish-count-badge" id="wishCountBadge">0</span></h3>
+        </div>
+        <div class="wishes-grid" id="wishesWall">
+            <!-- Wishes will be dynamically added here -->
+        </div>
+        <p class="wall-empty-msg" id="wallEmptyMsg">No wishes yet — be the first to leave one! 💌</p>
+    </section>
+
+    <!-- ===================== SECTION 5: QUIZ ===================== -->
+    <section class="section quiz-section" id="quiz">
+        <div class="section-header reveal">
+            <p class="section-tag script-font">How Well Do You Know Me?</p>
+            <h2 class="section-title">Fun Facts <span class="accent">Quiz</span></h2>
+        </div>
+        <div class="quiz-container reveal">
+            <div class="quiz-progress glass-card">
+                <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                <span class="quiz-progress-text" id="quizProgressText">Question 1 of 5</span>
+            </div>
+            <div class="quiz-card glass-card" id="quizCard">
+                <div class="quiz-question" id="quizQuestion"></div>
+                <div class="quiz-options" id="quizOptions"></div>
+                <div class="quiz-feedback" id="quizFeedback"></div>
+            </div>
+            <div class="quiz-score glass-card" id="quizScore" style="display:none;">
+                <div class="score-emoji" id="scoreEmoji">🏆</div>
+                <h3 id="scoreTitle">Quiz Complete!</h3>
+                <p class="score-text" id="scoreText"></p>
+                <div class="score-bar-container">
+                    <div class="score-bar" id="scoreBar"></div>
+                </div>
+                <button class="quiz-restart-btn" id="quizRestartBtn">🔄 Try Again</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 6: PLAYLIST ===================== -->
+    <section class="section playlist-section" id="playlist">
+        <div class="section-header reveal">
+            <p class="section-tag script-font">Feel the Rhythm</p>
+            <h2 class="section-title">Birthday <span class="accent">Playlist</span></h2>
+        </div>
+        <div class="playlist-container reveal">
+            <div class="playlist-visual">
+                <div class="vinyl-record" id="vinylRecord">
+                    <div class="vinyl-label">🎵</div>
+                </div>
+                <div class="equalizer" id="equalizer">
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                </div>
+            </div>
+            <div class="playlist-tracks">
+                <h3 class="playlist-heading">🎧 Birthday Hits</h3>
+                <div class="track glass-card" data-playing="false" id="track1" data-yt-id="_z-1fTlSDF0">
+                    <span class="track-number">01</span>
+                    <div class="track-info">
+                        <div class="track-name">Happy Birthday To You</div>
+                        <div class="track-artist">Classic</div>
+                    </div>
+                    <span class="track-duration">0:32</span>
+                    <button class="play-btn" aria-label="Play">▶</button>
+                </div>
+                <div class="track glass-card" data-playing="false" id="track2" data-yt-id="Hlw4B2Bj2og">
+                    <span class="track-number">02</span>
+                    <div class="track-info">
+                        <div class="track-name">Birthday — The Beatles</div>
+                        <div class="track-artist">The Beatles</div>
+                    </div>
+                    <span class="track-duration">2:42</span>
+                    <button class="play-btn" aria-label="Play">▶</button>
+                </div>
+                <div class="track glass-card" data-playing="false" id="track3" data-yt-id="3GwjfUFyY6M">
+                    <span class="track-number">03</span>
+                    <div class="track-info">
+                        <div class="track-name">Celebration</div>
+                        <div class="track-artist">Kool & The Gang</div>
+                    </div>
+                    <span class="track-duration">3:41</span>
+                    <button class="play-btn" aria-label="Play">▶</button>
+                </div>
+                <div class="track glass-card" data-playing="false" id="track4" data-yt-id="w5tWYmIOWGk">
+                    <span class="track-number">04</span>
+                    <div class="track-info">
+                        <div class="track-name">On Top of the World</div>
+                        <div class="track-artist">Imagine Dragons</div>
+                    </div>
+                    <span class="track-duration">3:12</span>
+                    <button class="play-btn" aria-label="Play">▶</button>
+                </div>
+                <div class="track glass-card" data-playing="false" id="track5" data-yt-id="ZbZSe6N_BXs">
+                    <span class="track-number">05</span>
+                    <div class="track-info">
+                        <div class="track-name">Happy</div>
+                        <div class="track-artist">Pharrell Williams</div>
+                    </div>
+                    <span class="track-duration">3:53</span>
+                    <button class="play-btn" aria-label="Play">▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 7: CAKE / CELEBRATE ===================== -->
+    <section class="section cake-section" id="cake">
+        <div class="section-header reveal">
+            <p class="section-tag script-font">The Big Moment</p>
+            <h2 class="section-title">Make a <span class="accent">Wish!</span></h2>
+        </div>
+        <div class="cake-container reveal">
+            <div class="cake-scene" id="cakeScene">
+                <div class="cake">
+                    <div class="cake-tier tier-top">
+                        <div class="candle-row">
+                            <div class="candle lit" data-index="0">
+                                <div class="flame">🔥</div>
+                            </div>
+                            <div class="candle lit" data-index="1">
+                                <div class="flame">🔥</div>
+                            </div>
+                            <div class="candle lit" data-index="2">
+                                <div class="flame">🔥</div>
+                            </div>
+                            <div class="candle lit" data-index="3">
+                                <div class="flame">🔥</div>
+                            </div>
+                            <div class="candle lit" data-index="4">
+                                <div class="flame">🔥</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cake-tier tier-middle"></div>
+                    <div class="cake-tier tier-bottom"></div>
+                    <div class="cake-plate"></div>
+                </div>
+                <p class="cake-instruction" id="cakeInstruction">
+                    ✨ Click the candles to blow them out! ✨
+                </p>
+                <button class="blow-all-btn glass-card" id="blowAllBtn">🌬️ Blow All Candles</button>
+            </div>
+            <canvas id="fireworksCanvas"></canvas>
+        </div>
+
+        <!-- Wish Modal -->
+        <div class="wish-modal" id="wishModal">
+            <div class="wish-modal-content glass-card">
+                <div class="wish-modal-emoji">🎉🥳🎊</div>
+                <h3>Happy Birthday, Veryniceglory!</h3>
+                <p>May all your wishes come true, Veryniceglory! Here's to an amazing year ahead filled with love,
+                    success, and endless glory!</p>
+                <div class="wish-confetti-burst" id="wishConfetti"></div>
+                <button class="wish-close-btn" id="wishCloseBtn">🎂 Thank You!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <p class="footer-message script-font">Here's to another amazing year! 🥂</p>
+            <div class="footer-share">
+                <p>Share the love:</p>
+                <div class="share-buttons">
+                    <button class="share-btn" id="shareWhatsapp" title="Share on WhatsApp">💬</button>
+                    <button class="share-btn" id="shareTwitter" title="Share on Twitter">🐦</button>
+                    <button class="share-btn" id="shareCopy" title="Copy link">🔗</button>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-credit">Made with ❤️ and lots of 🎂</p>
+            <p class="footer-year">© 2026 — A Special Birthday Celebration</p>
+        </div>
+    </footer>
+
+    <!-- Back to top rocket -->
+    <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">🚀</button>
+
+    <!-- Hidden audio element for YouTube API integration -->
+    <div id="youtubePlayer" style="position: absolute; width: 0; height: 0; opacity: 0; pointer-events: none;"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
