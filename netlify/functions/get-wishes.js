@@ -1,8 +1,8 @@
-const { getStore } = require('@netlify/blobs');
+import { getStore } from '@netlify/blobs';
 
-exports.handler = async (event, context) => {
-  if (event.httpMethod !== 'GET') {
-    return { statusCode: 405, body: JSON.stringify({ error: 'Method Not Allowed' }) };
+export default async (req, context) => {
+  if (req.method !== 'GET') {
+    return new Response(JSON.stringify({ error: 'Method Not Allowed' }), { status: 405 });
   }
 
   try {
@@ -11,26 +11,18 @@ exports.handler = async (event, context) => {
     
     let wishes = [];
     if (existingWishesRaw) {
-      try {
-        wishes = JSON.parse(existingWishesRaw);
-      } catch (e) {
-        console.error("Error parsing existing wishes", e);
-      }
+      try { wishes = JSON.parse(existingWishesRaw); } catch (e) { }
     }
 
-    return {
-      statusCode: 200,
+    return new Response(JSON.stringify({ wishes }), {
+      status: 200,
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({ wishes })
-    };
+      }
+    });
   } catch (error) {
     console.error("Error fetching wishes:", error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: "Failed to fetch wishes", details: error.message, stack: error.stack, wishes: [] })
-    };
+    return new Response(JSON.stringify({ error: "Failed to fetch wishes", details: error.message, wishes: [] }), { status: 500 });
   }
 };
